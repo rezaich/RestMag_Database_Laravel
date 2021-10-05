@@ -16,12 +16,11 @@ class UserController extends Controller
     public function registers(Request $request)
     {
         $user = new User();
-        $user ->name = $request -> name;
         $user ->user_name = $request -> user_name;
         $user ->password = Hash::make($request -> password);
         $user ->api_token = null;
         $user -> save();
 
-        return response(['id'=>$user->id,'name'=>$user->name,'user_name'=>$user->user_name]);
+        return response(['id'=>$user->id,'user_name'=>$user->user_name]);
     }
 }
