@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\API\V1\CategoryController;
 use App\Http\Controllers\API\V1\LoginController;
 use App\Http\Controllers\API\V1\ProductController;
 use App\Http\Controllers\API\V1\SaleController;
