@@ -49,6 +49,9 @@ Route::group(['prefix'=>'v1'],
 
 });
 
+Route::apiResource('/category', CategoryController::class);
+
+
 });
     });
 

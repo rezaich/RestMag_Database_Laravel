@@ -11,6 +11,7 @@ class UserController extends Controller
 {
     public function index()
     {
+        
         return response(['users' => User::all()]);
     }
     public function registers(Request $request)
