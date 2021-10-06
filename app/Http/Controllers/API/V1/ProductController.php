@@ -13,7 +13,7 @@ class ProductController extends Controller
         $product -> name = $request -> name;
         $product -> price = $request -> price;
         $product -> description = $request -> description;
-        $product -> image_link = $request -> image_link;
+        // $product -> image_link = $request -> image_link;
         $product -> category_id = $request -> category_id;
         $product -> status = 'public';
         $product -> save();
@@ -23,7 +23,7 @@ class ProductController extends Controller
             'name'=>$product->name,
             'price'=>$product -> price,
             'description'=> $product -> description,
-            'image_link'=>$product -> image_link = $request ,
+            // 'image_link'=>$product -> image_link = $request ,
             'category-id'=>$product -> category_id,
             'status'=> $product -> status
         ]);
