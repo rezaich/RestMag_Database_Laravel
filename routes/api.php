@@ -51,6 +51,8 @@ Route::group(['prefix'=>'v1'],
 });
 
 Route::apiResource('/category', CategoryController::class);
+Route::get('/products',[ProductController::class,'index']);
+
 
 
 });

@@ -18,7 +18,7 @@ class CreateProductsTable extends Migration
             $table->string('name');
             $table->unsignedInteger('price');
             $table->text('description');
-            // $table->text('image_link');
+            $table->text('image_link');
             $table->foreignId('category_id')->constrained();
             $table->enum('status',['public','private'])->default('public');
             $table->timestamps();
