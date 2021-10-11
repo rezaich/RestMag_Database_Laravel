@@ -31,18 +31,23 @@ Route::group(['prefix'=>'v1'],
     Route::group(['middleware'=> 'is_admin','as' => 'admin'],
 
     function(){
+
     Route::get('/users',[
         App\http\Controllers\API\v1\admin\UserController::class
         ,
         'index'
     ]);
 
-    Route::apiResource('/sale', SaleController::class);
+
 
     Route::post('/registers',[
         App\http\Controllers\API\v1\admin\UserController::class,'registers']);
 
     Route::post('/products/store',[ProductController::class,'store']);
+
+    Route::post('/store',[
+        App\http\Controllers\API\v1\admin\UserController::class,'store']);
+
 });
     Route::group([
     'as' => 'user'
@@ -52,7 +57,7 @@ Route::group(['prefix'=>'v1'],
 
 Route::apiResource('/category', CategoryController::class);
 Route::get('/products',[ProductController::class,'index']);
-
+Route::apiResource('/sale', SaleController::class);
 
 
 });
