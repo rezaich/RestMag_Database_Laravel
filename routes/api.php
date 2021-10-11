@@ -48,6 +48,9 @@ Route::group(['prefix'=>'v1'],
     Route::post('/store',[
         App\http\Controllers\API\v1\admin\UserController::class,'store']);
 
+    Route::get('/show',[
+    App\http\Controllers\API\v1\admin\UserController::class,'show']);
+
 });
     Route::group([
     'as' => 'user'

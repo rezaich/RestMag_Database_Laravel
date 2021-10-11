@@ -37,4 +37,11 @@ class UserController extends Controller
 
         return response(['success'=> true]);
     }
+    
+    public function show(Request $request)
+    {
+        $user = $request ->user();
+        $user -> load('userDetail');
+        return response(['user' => $user]);
+    }
 }
